@@ -1,0 +1,8 @@
+﻿SELECT s1.sname, SDO_GEOM.RELATE(s1.sshape,'determine',s2.sshape,0.005) relationship
+FROM state s1, state s2
+WHERE s2.sname='North Dakota';
+
+/* North Dakota와 다른 state 간의 관계?
+mask: 'determine' 여기에 interaction에 해당하는 말 넣으면 T/F 반환
+tol: 0.005 이만큼의 오차 용인  */
+
